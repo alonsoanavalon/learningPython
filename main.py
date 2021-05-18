@@ -1,3 +1,5 @@
+from datetime import datetime
+
 """ Hola mundo """
 print('Hello world')
 
@@ -49,10 +51,28 @@ for n in nums:
 """ Creando clase """
 
 class Persona:
-    def __init__(self, nombre, apellido):
+    contador = 0
+    reino = "animal"
+    
+    def __init__(self, nombre, apellido, nacimiento):
         self.nombre = nombre
         self.apellido = apellido
+        self.nacimiento = nacimiento
+        Persona.contador+=1
+    def devolver_edad(self):
+        return datetime.today().year - self.nacimiento
+    def comer(self, comida):
+        print("Hola soy {} y quiero comer {}".format(self.nombre, comida))
+    def isReino(self):
+        print("Hola soy {} y pertenezco al reino {}".format(self.nombre, Persona.reino))
 
-alonso = Persona('alonso', 'anavalon')
+alonso = Persona('alonso', 'anavalon', 1995)
 print(alonso.nombre)
 print(alonso.apellido)
+print(alonso.devolver_edad())
+alonso.comer('pizza')
+melisa = Persona("Melisa", "Fuentealba", 1996)
+print("La cantidad de personas creadas es {}".format(Persona.contador))
+print("La persona {}")
+
+alonso.isReino()
