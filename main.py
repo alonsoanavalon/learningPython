@@ -7,7 +7,7 @@ print('Hello world')
 def suma (a,b):
     return a+b
 
-result = suma(2,43)
+result = suma(2,50)
 print(result)
 
 """ Funcion con parámetros indeterminados """
@@ -16,7 +16,7 @@ def saludar_personas(*personas):
     for persona in personas:
         print("Hola {} como estás?".format(persona))
 
-saludar_personas("Javiera", "Rodrigo", "Antonio")
+saludar_personas("Pepe", "Nose", "Malcolm")
 
 """ Ciclo for básico"""
 
