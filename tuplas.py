@@ -15,5 +15,4 @@ while True:
         if n == 3:
             continue
         print(n)
-  
     break
