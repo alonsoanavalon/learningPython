@@ -19,8 +19,6 @@ def users_action(id):
         return "Su id no se ha encontrado"
     return message  
 
-    
-
 
 
 app.run(debug=True)
