@@ -48,6 +48,7 @@ class DataBase:
         try:
             self.cursor.execute(sql)
             user = self.cursor.fetchone()
+    
             print("id:", user[0])
             print("name:", user[1])
             print("surname:", user[2])
@@ -75,6 +76,7 @@ class DataBase:
 
         try:
             self.cursor.execute(sql)
+            self.connection.commit()
         except ValueError:
             print("error")
     
@@ -89,7 +91,10 @@ class DataBase:
 
 
 database = DataBase ()
-""" database.insert_user("Pedro", "Pascal") """
-database.update_user(1, "alfonso")
+database.insert_user("Juanin", "Pascal")
+""" database.update_user(1, "alfonso") """
 """ database.select_user(2) """
+
 database.select_all_users()
+
+database.select_user(1)
