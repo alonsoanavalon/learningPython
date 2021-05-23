@@ -46,7 +46,20 @@ for n in nums:
     if n % 2 == 0:
         print("{} es par".format(n))
     else:
+
         print("{} es impar".format(n))
+
+
+
+
+
+
+
+
+
+
+
+        
 
 """ Creando clase """
 
@@ -59,6 +72,7 @@ class Persona:
         self.apellido = apellido
         self.nacimiento = nacimiento
         Persona.contador+=1
+        
     def devolver_edad(self):
         return datetime.today().year - self.nacimiento
     def comer(self, comida):
@@ -70,6 +84,22 @@ alonso = Persona('alonso', 'anavalon', 1995)
 print(alonso.nombre)
 print(alonso.apellido)
 print(alonso.devolver_edad())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 alonso.comer('pizza')
 melisa = Persona("Melisa", "Fuentealba", 1996)
 print("La cantidad de personas creadas es {}".format(Persona.contador))
