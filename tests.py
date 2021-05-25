@@ -171,16 +171,13 @@ def validarRut ():
 
 
 
-validarRut()
+#validarRut()
 
+
+lista = ["Uno", "dos", "tres", "cuatro"]
+lista.insert(1, "kaka")
+print(lista)
         
 
-
-
-
-
-
-
-""" Segundo modo mio """
 
 

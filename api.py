@@ -4,7 +4,49 @@ from flask import jsonify
 
 app = Flask(__name__)
 
-users = ["Alonso","Melisa","Pepe","Juanito","Alejandro","Paloma","Gervasio","Xing", "Akram", "Beltuz", "Kinao", "Ahuej"]
+users = [{"nombre":"pepe", "numero":"9"}, {"nombre":"jose", "numero":"10"}]
+
+@app.route('/app/users/add', methods=["POST"])
+def add_user():
+    if request.method == "POST":
+        user_name = request.form["nombre"]
+        user_num = request.form["numero"]
+        users.append({
+            "nombre":user_name,
+            "numero":user_num
+        })
+        print(users)
+        return jsonify(users)
+
+
+#request.args.params("name", "prametropordefecto")
+
+@app.route('/app/users/<id>', methods=["GET"])
+
+def test_function(id):
+    contador = 1
+    id = int(id)
+    for user in users:
+        print("contador es", contador)
+        print("id es", id)
+        if contador == id:
+            msg = ("El usuario {} es {}".format(id, user ))
+            return msg
+        else:
+            contador +=1
+    else:
+        return("No se ha encontrado el usuario")
+    #print(request.args.get('nombre')) <- conseguir argumento /app/users?nombre=alonso
+    
+
+
+app.run(debug=True)
+
+
+
+
+
+
 
 @app.route('/app/test/<id>', methods=['GET', "POST"])
 
@@ -37,7 +79,3 @@ def users_action(id):
     if message == False:
         return "Su id no se ha encontrado"
     return message  
-
-
-
-app.run(debug=True)

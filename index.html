@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 
     setTimeout(()=>{
       let d = document;
@@ -25,4 +25,69 @@
     
     
     
-    </script>
+</script> -->
+
+
+
+
+
+<!-- <div style="background-color:#FF8C79; padding:2rem; margin-bottom:1rem; border-radius:.5rem; color:#fff" class="pepito">
+ <h3 style="color:#fff">Información de envío</h3>
+ <ul>
+   <li><strong>Las comunas de RM Cobertura Base corresponden a:</strong> Cerrillos, Cerro Navia, Conchalí, El Bosque, Estación Central, Hechuraba, Independencia, La Cisterna, La florida, La Granja, La pintana, La reina, Las condes, Lo espejo, Lo prado, Lo barnechea, Macul, Maipú, Ñuñoa, Padre Hurtado, Pedro Aguirre Cerda, Peñalolén, Providencia, Pudahuel, Puente alto, Quilicura, Quinta Normal, Recoleta,  Renca, San Bernardo, San Joaquín, San miguel, San ramón, Santiago, Vitacura</li>
+<br>
+   <li><strong>Las comunas lejanas de RM corresponden a:</strong> Buin, Calera de Tango, Colina, Curacaví, Lampa, Paine, Talagante, Isla de Maipo, Melipilla, 
+   María Pinto</li>
+
+ </ul>
+</div>
+
+
+d
+
+<script>
+
+    setTimeout(()=>{
+      let d = document;
+      let btnStgoCentro = d.querySelector("#shipping_method_0_flat_rate3")
+    
+        btnStgoCentro.addEventListener("click", e => {
+      
+         alert("Recuerda que las comunas de santiago centro son : Maipú, pudahuel, ñuñoa, providencia y las condes")
+    
+        })
+    
+    }, 10000)
+
+    setTimeout(() => {
+        let d = document;
+        let btnStgoLejos = d.querySelector("#shipping_method_0_flat_rate5")
+
+        btnStgoLejos.addEventListener("click", e => {
+            alert("Recuerda que las comunas lejanas son: Buin, colina y huechuraba")
+        })
+
+    }, 10000)
+
+</script> -->
+
+<div class="alertCercanas">
+    
+</div>
+
+<style>
+ 
+    .hiddenAlert {
+        visibility: hidden;
+        display: none;
+    }
+
+    .alertCercanas {
+        position: absolute;
+        z-index:100;
+        height:400px;
+        width:400px;
+        color:red;
+    }
+
+</style>
