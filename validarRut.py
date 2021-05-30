@@ -11,6 +11,7 @@ def validarRut ():
         multiplicador = 2
         suma = 0
 
+        #pasando numero por numero
         while rut > 0:
             if multiplicador > 7:
                 multiplicador = 2
